@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="2" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" label="New Choice" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element label="Choice 1" sequence="0" value="Choice 1"/>
+                <element label="Choice 2" sequence="1" value="Choice 2"/>
+                <element label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="Legal" label="Request Type" max_length="40" name="u_request_type" type="string">
+            <choice>
+                <element label="Legal" sequence="0" value="Legal"/>
+                <element label="HR" sequence="1" value="HR"/>
+                <element label="Facilities" sequence="2" value="Facilities"/>
+                <element label="Sales" sequence="3" value="Sales"/>
+                <element label="Marketing" sequence="4" value="Marketing"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="What Needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
+            <choice>
+                <element label="HR1" sequence="0" value="HR1"/>
+                <element label="HR2" sequence="1" value="HR2"/>
+                <element label="Facilities1" sequence="2" value="Facilities1"/>
+                <element label="Facilities2" sequence="3" value="Facilities2"/>
+                <element label="Legal1" sequence="4" value="Legal1"/>
+                <element label="Legal2" sequence="5" value="Legal2"/>
+                <element label="Sales1" sequence="6" value="Sales1"/>
+                <element label="Sales2" sequence="7" value="Sales2"/>
+                <element label="Marketing1" sequence="8" value="Marketing1"/>
+                <element label="Marketing2" sequence="9" value="Marketing2"/>
+            </choice>
+        </element>
+        <element label="When Needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
+    </element>
+</database>
